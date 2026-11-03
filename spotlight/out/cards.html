@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invitational Spotlight Cards</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&display=swap');
+
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 40px; background: #dfe6ec;
+    font-family: 'DM Sans', system-ui, sans-serif; display: flex;
+    flex-wrap: wrap; gap: 40px; justify-content: center; }
+
+  /* 1200x1200 is LinkedIn's square post. Screenshot each .card at this size.
+     flex: 0 0 auto matters — as a flex item the card shrinks below 1200px
+     otherwise, and every export comes out the wrong aspect ratio. */
+  .card { position: relative; flex: 0 0 auto; width: 1200px; height: 1200px; margin: 0;
+    padding: 96px 96px 88px; display: flex; flex-direction: column; overflow: hidden;
+    isolation: isolate; color: #F4F8FB;
+    background:
+      linear-gradient(168deg, #082741 0%, #04172a 46%, #020d1a 100%); }
+
+  /* Depth, in three layers: two coloured glows, a paper grain, and a vignette.
+     Flat navy reads as a slide; this reads as print. */
+  .glow { position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(52% 44% at 88% 6%, rgba(32,142,232,.30) 0%, transparent 70%),
+      radial-gradient(46% 42% at 4% 98%, rgba(189,145,70,.26) 0%, transparent 72%),
+      radial-gradient(120% 100% at 50% 50%, transparent 46%, rgba(1,7,15,.62) 100%); }
+
+  .grain { position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    opacity: .085; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 220px 220px; }
+
+  /* The 27 of 27 January, and of the 27 prizes. Outlined rather than filled so
+     it reads as a watermark instead of competing with the name. */
+  .numeral { position: absolute; z-index: 1; right: -54px; top: 50%;
+    transform: translateY(-52%); pointer-events: none;
+    font-family: 'Playfair Display', serif; font-weight: 900; font-size: 660px;
+    line-height: .78; letter-spacing: -24px; color: transparent;
+    -webkit-text-stroke: 2px rgba(231,199,127,.085); }
+
+  /* A hairline frame, with one gold tick at the top-left and one at the
+     bottom-right — asymmetry reads as designed, four corners reads as a border. */
+  .frame { position: absolute; z-index: 2; inset: 40px; pointer-events: none;
+    border: 1px solid rgba(231,199,127,.20); }
+  .frame::before, .frame::after { content: ""; position: absolute; width: 56px; height: 56px; }
+  .frame::before { top: -1px; left: -1px;
+    border-top: 2px solid rgba(231,199,127,.85); border-left: 2px solid rgba(231,199,127,.85); }
+  .frame::after { bottom: -1px; right: -1px;
+    border-bottom: 2px solid rgba(231,199,127,.85); border-right: 2px solid rgba(231,199,127,.85); }
+
+  .card-top, .card-body, .card-foot { position: relative; z-index: 3; }
+
+  .card-top { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .kicker { font-family: 'Manrope', sans-serif; font-size: 19px; font-weight: 800;
+    letter-spacing: 5.4px; text-transform: uppercase;
+    background: linear-gradient(92deg, #f2d998 0%, #bd9146 52%, #f2d998 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .mark { width: 74px; height: 74px; object-fit: contain; opacity: .94; }
+
+  /* Content sits a little below optical centre: the eye reads a poster as
+     bottom-weighted, and it leaves the numeral room to breathe. */
+  .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center;
+    padding-top: 54px; max-width: 880px; }
+
+  .eyebrow { font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 700;
+    letter-spacing: 4.2px; text-transform: uppercase; color: #8fcdf5; }
+
+  .name { margin: 26px 0 0; font-family: 'Playfair Display', serif; font-size: 108px;
+    line-height: .98; font-weight: 700; letter-spacing: -3px; text-wrap: balance;
+    text-shadow: 0 2px 30px rgba(0,0,0,.32); }
+
+  .dash { display: block; width: 140px; height: 3px; margin: 34px 0 0;
+    background: linear-gradient(90deg, #f2d998 0%, #bd9146 70%, rgba(189,145,70,0) 100%); }
+
+  .title { margin: 30px 0 0; font-size: 32px; line-height: 1.32; color: #c6d4de; }
+  .company { margin: 30px 0 0; font-family: 'Manrope', sans-serif; font-size: 42px;
+    font-weight: 700; letter-spacing: -.6px; line-height: 1.18; color: #9ad5fb; }
+  .title + .company { margin-top: 10px; font-size: 32px; }
+
+  .quote { margin: 34px 0 0; padding-left: 30px; border-left: 3px solid rgba(189,145,70,.8);
+    font-family: 'Playfair Display', serif; font-style: italic; font-size: 35px;
+    line-height: 1.42; color: #e6eef5; }
+
+  .rule { height: 1px; background: linear-gradient(90deg, rgba(231,199,127,.75), rgba(231,199,127,0)); }
+  .foot-row { display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; padding-top: 30px; }
+  .when { margin: 0; font-family: 'Manrope', sans-serif; font-size: 32px;
+    font-weight: 800; letter-spacing: -.2px; }
+  .where { margin: 8px 0 0; font-size: 24px; color: #8d9eac; }
+  .badge { padding: 13px 26px; border: 1px solid rgba(231,199,127,.42); border-radius: 999px;
+    font-family: 'Manrope', sans-serif; font-size: 17px; font-weight: 800;
+    letter-spacing: 2.8px; text-transform: uppercase; color: #e7c77f; white-space: nowrap; }
+
+  /* Deliberately unmissable: a card in this state must not be posted. The
+     banner disappears the moment the sheet records a yes in may_feature. */
+  .blocked { position: absolute; top: 0; left: 0; right: 0; z-index: 9;
+    padding: 15px; background: #8C1D18; color: #fff; text-align: center;
+    font-family: 'Manrope', sans-serif; font-size: 19px; font-weight: 800;
+    letter-spacing: 2.6px; text-transform: uppercase; }
+  .card--blocked { padding-top: 130px; }
+
+
+  .card--ivory { color: #17222B;
+    background: linear-gradient(168deg, #FCF9F3 0%, #F4ECDD 54%, #EDE2CE 100%); }
+  .card--ivory .glow {
+    background:
+      radial-gradient(54% 46% at 88% 4%, rgba(168,129,47,.16) 0%, transparent 70%),
+      radial-gradient(46% 44% at 2% 100%, rgba(18,48,79,.10) 0%, transparent 72%),
+      radial-gradient(120% 100% at 50% 50%, transparent 52%, rgba(120,98,62,.12) 100%); }
+  .card--ivory .grain { opacity: .14; mix-blend-mode: multiply; }
+  .card--ivory .numeral { -webkit-text-stroke: 2px rgba(18,48,79,.085); }
+  .card--ivory .frame { border-color: rgba(18,48,79,.16); }
+  .card--ivory .frame::before, .card--ivory .frame::after { border-color: #A8812F; }
+  .card--ivory .kicker {
+    background: linear-gradient(92deg, #C29A47 0%, #7A5A1C 52%, #C29A47 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .card--ivory .eyebrow { color: #0C6256; }
+  .card--ivory .name { color: #0F1A24; text-shadow: none; }
+  .card--ivory .dash { background: linear-gradient(90deg, #A8812F 0%, rgba(168,129,47,0) 100%); }
+  .card--ivory .title { color: #4C5C68; }
+  .card--ivory .company { color: #0C6256; }
+  .card--ivory .quote { color: #2A3842; border-left-color: #A8812F; }
+  .card--ivory .rule { background: linear-gradient(90deg, rgba(18,48,79,.38), rgba(18,48,79,0)); }
+  .card--ivory .when { color: #0F1A24; }
+  .card--ivory .where { color: #6E7C88; }
+  .card--ivory .badge { color: #7A5A1C; border-color: rgba(168,129,47,.55); }
+
+  .card--emerald { color: #F6F2E6;
+    background: linear-gradient(168deg, #0B4430 0%, #06281C 50%, #021510 100%); }
+  .card--emerald .glow {
+    background:
+      radial-gradient(54% 46% at 86% 4%, rgba(106,201,146,.22) 0%, transparent 70%),
+      radial-gradient(46% 44% at 2% 100%, rgba(212,170,86,.26) 0%, transparent 72%),
+      radial-gradient(120% 100% at 50% 50%, transparent 46%, rgba(1,10,7,.66) 100%); }
+  .card--emerald .numeral { -webkit-text-stroke: 2px rgba(222,189,120,.10); }
+  .card--emerald .frame { border-color: rgba(222,189,120,.26); }
+  .card--emerald .frame::before, .card--emerald .frame::after { border-color: rgba(222,189,120,.92); }
+  .card--emerald .kicker {
+    background: linear-gradient(92deg, #EBD69B 0%, #C09A4C 52%, #EBD69B 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .card--emerald .eyebrow { color: #93D7AE; }
+  .card--emerald .dash { background: linear-gradient(90deg, #EBD69B 0%, #C09A4C 70%, rgba(192,154,76,0) 100%); }
+  .card--emerald .title { color: #C8D8CB; }
+  .card--emerald .company { color: #9FDCB8; }
+  .card--emerald .quote { border-left-color: rgba(222,189,120,.85); color: #E8F0E9; }
+  .card--emerald .rule { background: linear-gradient(90deg, rgba(222,189,120,.8), rgba(222,189,120,0)); }
+  .card--emerald .where { color: #8FA897; }
+  .card--emerald .badge { color: #EBD69B; border-color: rgba(222,189,120,.46); }
+
+  .card--deco { color: #F7F3EA; padding: 96px 110px 88px;
+    background: linear-gradient(168deg, #16121C 0%, #0C0A12 52%, #060509 100%); }
+  .card--deco .glow {
+    background:
+      radial-gradient(60% 50% at 50% -6%, rgba(231,199,127,.20) 0%, transparent 72%),
+      radial-gradient(70% 46% at 50% 106%, rgba(231,199,127,.13) 0%, transparent 74%),
+      radial-gradient(120% 100% at 50% 50%, transparent 44%, rgba(3,2,6,.72) 100%); }
+  .card--deco .numeral { display: none; }
+
+  /* A double rule rather than a single hairline — deco is about repetition. */
+  .card--deco .frame { inset: 36px; border-color: rgba(231,199,127,.42);
+    box-shadow: inset 0 0 0 7px rgba(10,8,14,.9), inset 0 0 0 8px rgba(231,199,127,.22); }
+  .card--deco .frame::before, .card--deco .frame::after { width: 40px; height: 40px;
+    border-width: 2px; border-color: rgba(231,199,127,.95); }
+
+  .card--deco .card-top { justify-content: center; gap: 22px; }
+  .card--deco .mark { order: -1; width: 54px; height: 54px; }
+  .card--deco .kicker { font-size: 18px; letter-spacing: 7px; }
+
+  .card--deco .card-body { align-items: center; text-align: center;
+    max-width: none; padding-top: 30px; }
+  .card--deco .eyebrow { letter-spacing: 6px; color: #e7c77f; }
+  .card--deco .name { font-size: 96px; letter-spacing: -1.4px; }
+  .card--deco .dash { width: 240px; margin: 36px auto 0;
+    background: linear-gradient(90deg, rgba(231,199,127,0), #e7c77f 50%, rgba(231,199,127,0)); }
+  .card--deco .company { color: #e7c77f; font-size: 36px; letter-spacing: 2.4px;
+    text-transform: uppercase; font-weight: 700; }
+  .card--deco .title { color: #cbbfae; }
+  .card--deco .quote { border-left: 0; padding: 0; max-width: 820px; }
+
+  .card--deco .rule { background: linear-gradient(90deg,
+    rgba(231,199,127,0), rgba(231,199,127,.75) 50%, rgba(231,199,127,0)); }
+  .card--deco .foot-row { flex-direction: column; gap: 18px; text-align: center; }
+  .card--deco .where { color: #9b9289; }
+  .card--deco .badge { border-color: rgba(231,199,127,.5); color: #e7c77f; }
+
+  .card--mono { color: #FFFFFF; background: #101114; padding: 96px 100px 88px; }
+  .card--mono .glow { background:
+    radial-gradient(90% 70% at 50% 120%, rgba(255,255,255,.055) 0%, transparent 70%); }
+  .card--mono .grain { opacity: .05; }
+  .card--mono .numeral, .card--mono .frame { display: none; }
+
+  .card--mono .kicker { background: none; color: #7E848E;
+    -webkit-text-fill-color: #7E848E; letter-spacing: 4.6px; font-size: 17px; }
+  .card--mono .mark { opacity: .55; width: 56px; height: 56px; }
+
+  .card--mono .card-body { max-width: 940px; padding-top: 0; }
+  .card--mono .eyebrow { color: #6F7681; letter-spacing: 3.6px; font-size: 16px; }
+  .card--mono .name { font-family: 'Manrope', sans-serif; font-weight: 800;
+    font-size: 126px; line-height: .94; letter-spacing: -5px; text-shadow: none; }
+  .card--mono .dash { width: 58px; height: 4px; margin-top: 40px; background: #E7C77F; }
+  .card--mono .title { color: #A7AEB8; }
+  .card--mono .company { color: #FFFFFF; font-weight: 600; font-size: 38px;
+    letter-spacing: -.4px; }
+  .card--mono .quote { border-left-color: #E7C77F; color: #D7DCE3;
+    font-family: 'Manrope', sans-serif; font-style: normal; font-size: 30px; }
+
+  .card--mono .rule { background: rgba(255,255,255,.14); }
+  .card--mono .where { color: #7E848E; }
+  .card--mono .badge { border-color: rgba(255,255,255,.22); color: #C9CED6; }</style>
+</head>
+<body>
+
+<figure class="card card--navy" id="card-nadiv-schorer-meiri" data-name="Nadiv Schorer Meiri" data-theme="navy">
+  <span class="glow" aria-hidden="true"></span>
+  <span class="grain" aria-hidden="true"></span>
+  <span class="numeral" aria-hidden="true">27</span>
+  <span class="frame" aria-hidden="true"></span>
+  
+
+  <header class="card-top">
+    <span class="kicker">Motiv Brands Invitational</span>
+    <img class="mark" src="brand-mark.png" alt="">
+  </header>
+
+  <div class="card-body">
+    <span class="eyebrow">Joining the field</span>
+    <h2 class="name">Nadiv Schorer Meiri</h2>
+    <span class="dash" aria-hidden="true"></span>
+    
+    <p class="company">Loop Marketers</p>
+    
+  </div>
+
+  <footer class="card-foot">
+    <div class="rule"></div>
+    <div class="foot-row">
+      <div>
+        <p class="when">27 January 2027</p>
+        <p class="where">Bali Hai Golf Club &middot; Las Vegas</p>
+      </div>
+      <span class="badge">72-Player Field</span>
+    </div>
+  </footer>
+</figure>
+
+<figure class="card card--navy" id="card-joe-ruiz" data-name="Joe Ruiz" data-theme="navy">
+  <span class="glow" aria-hidden="true"></span>
+  <span class="grain" aria-hidden="true"></span>
+  <span class="numeral" aria-hidden="true">27</span>
+  <span class="frame" aria-hidden="true"></span>
+  
+
+  <header class="card-top">
+    <span class="kicker">Motiv Brands Invitational</span>
+    <img class="mark" src="brand-mark.png" alt="">
+  </header>
+
+  <div class="card-body">
+    <span class="eyebrow">Joining the field</span>
+    <h2 class="name">Joe Ruiz</h2>
+    <span class="dash" aria-hidden="true"></span>
+    
+    <p class="company">Monetized Clicks</p>
+    
+  </div>
+
+  <footer class="card-foot">
+    <div class="rule"></div>
+    <div class="foot-row">
+      <div>
+        <p class="when">27 January 2027</p>
+        <p class="where">Bali Hai Golf Club &middot; Las Vegas</p>
+      </div>
+      <span class="badge">72-Player Field</span>
+    </div>
+  </footer>
+</figure>
+
+<figure class="card card--navy" id="card-rudy-treminio" data-name="Rudy Treminio" data-theme="navy">
+  <span class="glow" aria-hidden="true"></span>
+  <span class="grain" aria-hidden="true"></span>
+  <span class="numeral" aria-hidden="true">27</span>
+  <span class="frame" aria-hidden="true"></span>
+  
+
+  <header class="card-top">
+    <span class="kicker">Motiv Brands Invitational</span>
+    <img class="mark" src="brand-mark.png" alt="">
+  </header>
+
+  <div class="card-body">
+    <span class="eyebrow">Joining the field</span>
+    <h2 class="name">Rudy Treminio</h2>
+    <span class="dash" aria-hidden="true"></span>
+    
+    <p class="company">The Platinum Collection LLC</p>
+    
+  </div>
+
+  <footer class="card-foot">
+    <div class="rule"></div>
+    <div class="foot-row">
+      <div>
+        <p class="when">27 January 2027</p>
+        <p class="where">Bali Hai Golf Club &middot; Las Vegas</p>
+      </div>
+      <span class="badge">72-Player Field</span>
+    </div>
+  </footer>
+</figure>
+
+<figure class="card card--navy" id="card-paul-manno" data-name="Paul Manno" data-theme="navy">
+  <span class="glow" aria-hidden="true"></span>
+  <span class="grain" aria-hidden="true"></span>
+  <span class="numeral" aria-hidden="true">27</span>
+  <span class="frame" aria-hidden="true"></span>
+  
+
+  <header class="card-top">
+    <span class="kicker">Motiv Brands Invitational</span>
+    <img class="mark" src="brand-mark.png" alt="">
+  </header>
+
+  <div class="card-body">
+    <span class="eyebrow">Joining the field</span>
+    <h2 class="name">Paul Manno</h2>
+    <span class="dash" aria-hidden="true"></span>
+    
+    <p class="company">Affiliated Media</p>
+    
+  </div>
+
+  <footer class="card-foot">
+    <div class="rule"></div>
+    <div class="foot-row">
+      <div>
+        <p class="when">27 January 2027</p>
+        <p class="where">Bali Hai Golf Club &middot; Las Vegas</p>
+      </div>
+      <span class="badge">72-Player Field</span>
+    </div>
+  </footer>
+</figure>
+</body>
+</html>
