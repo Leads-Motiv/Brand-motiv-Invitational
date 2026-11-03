@@ -10,6 +10,11 @@
   ],
   "redirects": [
     {
+      "source": "/spotlight/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
       "source": "/sponsorships",
       "destination": "/sponsor",
       "permanent": true
