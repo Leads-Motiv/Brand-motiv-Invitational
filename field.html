@@ -1,0 +1,3838 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Field | Motiv Brands Invitational</title>
+<meta name="description" content="Who is joining the 1st Annual Motiv Brands Invitational at Bali Hai Golf Club on 27 January 2027.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://brand-motiv-invitational.vercel.app/field">
+<meta name="theme-color" content="#00040b">
+<link rel="icon" href="assets/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Motiv Brands Invitational">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://brand-motiv-invitational.vercel.app/field">
+<meta property="og:title" content="Sponsorship Opportunities | Motiv Brands Invitational">
+<meta property="og:description" content="Title sponsorships, category sponsorships and raffle prize donations for the 1st Annual Motiv Brands Invitational at Bali Hai Golf Club.">
+<meta property="og:image" content="https://brand-motiv-invitational.vercel.app/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The 1st Annual Motiv Brands Invitational at Bali Hai Golf Club, Las Vegas.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sponsorship Opportunities | Motiv Brands Invitational">
+<meta name="twitter:description" content="Title sponsorships, category sponsorships and raffle prize donations for the 1st Annual Motiv Brands Invitational at Bali Hai Golf Club.">
+<meta name="twitter:image" content="https://brand-motiv-invitational.vercel.app/assets/og-image.jpg">
+
+<style>
+  /* ---- build-time header fixes -------------------------------------- */
+
+  /* The glass header is 0.91/0.84 alpha, so it takes its colour from what
+     sits behind it. In GHL that was a dark page; as a standalone document
+     the white <body> showed through and the bar read mid-grey. Giving the
+     header itself a dark base restores the intended near-black navy. */
+  #motiv-invitational-header-v182 {
+    background: #00040b;
+  }
+
+  /* "Back to Event Details" was invisible on the sponsorship page. Its own
+     rule is .spt-back-link (0,1,0) but "#motiv-sponsorship-top a { color:
+     inherit }" scores (1,0,1) and wins, so the link inherited --spt-ink,
+     a dark navy, on a dark header. These selectors score (1,1,0) and take
+     it back. The registration page escapes the same bug only because its
+     block colour happens to be white. */
+  #motiv-sponsorship-top .spt-back-link,
+  #motiv-sponsorship-top .spt-back-link span,
+  #motiv-sponsorship-top .spt-back-link svg,
+  #motiv-registration-top .mrt-back-link,
+  #motiv-registration-top .mrt-back-link span,
+  #motiv-registration-top .mrt-back-link svg {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  #motiv-sponsorship-top .spt-back-link:hover,
+  #motiv-sponsorship-top .spt-back-link:hover span,
+  #motiv-sponsorship-top .spt-back-link:hover svg,
+  #motiv-registration-top .mrt-back-link:hover,
+  #motiv-registration-top .mrt-back-link:hover span,
+  #motiv-registration-top .mrt-back-link:hover svg {
+    color: #83df59;
+  }
+
+  /* Larger brand mark across the event headers, per request.
+     These are ID-scoped on purpose: this <style> sits in <head> while each
+     block ships its own <style> later in the body, so a plain class selector
+     would lose the "later rule wins" tie-break. */
+  #motiv-invitational-header-v182 .mih-brand-image-shell {
+    width: 58px;
+    height: 58px;
+  }
+
+  #motiv-invitational-header-v182 .mih-brand-image {
+    width: 42px;
+    height: 42px;
+  }
+
+  #motiv-sponsorship-top .spt-brand-image-shell,
+  #motiv-registration-top .mrt-brand-image-shell,
+  #motiv-registration-confirmation .rc-brand-image-shell,
+  #motiv-sponsorship-confirmation .sc-brand-image-shell {
+    width: 54px;
+    height: 54px;
+  }
+
+  #motiv-sponsorship-top .spt-brand-image,
+  #motiv-registration-top .mrt-brand-image,
+  #motiv-registration-confirmation .rc-brand-image,
+  #motiv-sponsorship-confirmation .sc-brand-image {
+    width: 38px;
+    height: 38px;
+  }
+
+  @media (max-width: 700px) {
+    #motiv-invitational-header-v182 .mih-brand-image-shell {
+      width: 48px;
+      height: 48px;
+    }
+
+    #motiv-invitational-header-v182 .mih-brand-image {
+      width: 34px;
+      height: 34px;
+    }
+  }
+</style>
+
+<style>
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #ffffff; }
+</style>
+</head>
+<body>
+
+<!--
+
+===============================================================================
+
+MOTIV BRANDS INVITATIONAL — SPONSORSHIP PAGE
+
+TOP BLOCK (Header + Hero + Sponsorship Catalog)
+
+
+
+VERSION: 1.1.0
+
+UPDATED: AUGUST 14, 2026
+
+
+
+CHANGE LOG (1.0.0 -> 1.1.0)
+
+-------------------------------------------------------------------------------
+
+- Added a "Get Started" CTA button to the Hero only. It smooth-scrolls to
+
+  #spt-form-anchor, placed at the very end of this block — right where the
+
+  native GHL form begins.
+
+- Header background changed from a translucent dark overlay to a solid
+
+  #05111d.
+
+SOURCE: Sponsorship_Selection_Sheet_v2.docx
+
+PRICING UPDATED: October 2026, to the approved list at
+
+https://sites.leadconnectorhq.com/preview/cyhy7WUahD30eQ0AFmEJ
+
+
+
+INSTALLATION
+
+-------------------------------------------------------------------------------
+
+This is the FIRST of two custom code blocks for the sponsorship page.
+
+Paste this block ABOVE the native GHL checkout form in the page builder.
+
+The second block (sponsorship-bottom.html) goes BELOW the form.
+
+
+
+KEEPING THIS IN SYNC WITH THE SELECTION SHEET
+
+-------------------------------------------------------------------------------
+
+Every price, availability status, and "what's included" line below was
+
+pulled directly from Sponsorship_Selection_Sheet_v2.docx. If that sheet is
+
+updated (an item sells out, a price changes, a new item is added), this file
+
+needs a matching manual update — there is no live data connection.
+
+
+
+Two items are currently marked RESERVED and shown with a muted/disabled
+
+treatment: Beverage Cart Sponsor, and the All-Inclusive Vacation Certificate
+
+raffle prize. Search "RESERVED" in this file to find and update them.
+
+
+
+PLACEHOLDER
+
+-------------------------------------------------------------------------------
+
+"Back to Event Details" link points to / —
+
+replace if that's not the confirmed live URL.
+
+===============================================================================
+
+-->
+
+
+
+<section
+
+  id="motiv-sponsorship-top"
+
+  class="spt-page"
+
+>
+
+  <style>
+
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap");
+
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+
+    #motiv-sponsorship-top {
+
+      --spt-navy-1250: #00050d;
+
+      --spt-navy-1150: #020c18;
+
+      --spt-navy-950: #08253c;
+
+      --spt-navy-900: #0b2e49;
+
+      --spt-navy-850: #0e3857;
+
+
+
+      --spt-green-800: #287c24;
+
+      --spt-green-700: #3e962f;
+
+      --spt-green-500: #83df59;
+
+      --spt-green-400: #a7ed89;
+
+      --spt-green-100: #effae9;
+
+
+
+      --spt-blue-700: #0864ae;
+
+      --spt-blue-600: #0877d0;
+
+      --spt-blue-500: #188ee8;
+
+      --spt-blue-400: #49acf2;
+
+      --spt-blue-100: #e9f6ff;
+
+
+
+      --spt-red-600: #df2031;
+
+      --spt-red-500: #f13c4c;
+
+
+
+      --spt-gold-800: #76501c;
+
+      --spt-gold-700: #956d2f;
+
+      --spt-gold-500: #e7c77f;
+
+      --spt-gold-100: #fff8e8;
+
+
+
+      --spt-white: #ffffff;
+
+
+
+      --spt-gray-50: #fafcfd;
+
+      --spt-gray-100: #f0f4f7;
+
+      --spt-gray-300: #c5d0da;
+
+      --spt-gray-450: #8392a0;
+
+      --spt-gray-500: #6e7f8e;
+
+
+
+      --spt-ink: #0f263b;
+
+
+
+      --spt-border: rgba(5, 29, 52, 0.13);
+
+
+
+      --spt-shadow-sm:
+
+        0 14px 38px
+
+        rgba(2, 14, 29, 0.10);
+
+
+
+      --spt-shadow-md:
+
+        0 26px 75px
+
+        rgba(2, 14, 29, 0.16);
+
+
+
+      --spt-ease:
+
+        cubic-bezier(0.16, 1, 0.3, 1);
+
+
+
+      position: relative;
+
+      width: 100%;
+
+      overflow-x: hidden;
+
+      color: var(--spt-ink);
+
+      background: var(--spt-white);
+
+      font-family:
+
+        "DM Sans",
+
+        Arial,
+
+        sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+
+
+    #motiv-sponsorship-top,
+
+    #motiv-sponsorship-top *,
+
+    #motiv-sponsorship-top *::before,
+
+    #motiv-sponsorship-top *::after {
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    #motiv-sponsorship-top a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+
+    #motiv-sponsorship-top img,
+
+    #motiv-sponsorship-top svg {
+
+      display: block;
+
+      max-width: 100%;
+
+    }
+
+
+
+    .spt-container {
+
+      width:
+
+        min(
+
+          calc(100% - 48px),
+
+          1180px
+
+        );
+
+      margin-inline: auto;
+
+    }
+
+
+
+    /* HEADER */
+
+
+
+    .spt-header {
+
+      border-bottom:
+
+        1px solid
+
+        rgba(255, 255, 255, 0.10);
+
+      background: #05111d;
+
+    }
+
+
+
+    .spt-header-inner {
+
+      display: flex;
+
+      min-height: 84px;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 24px;
+
+      padding-block: 16px;
+
+    }
+
+
+
+    .spt-brand-link {
+
+      display: inline-flex;
+
+      min-width: 0;
+
+      align-items: center;
+
+      gap: 13px;
+
+      color: var(--spt-white);
+
+    }
+
+
+
+    .spt-brand-image-shell {
+
+      display: grid;
+
+      width: 44px;
+
+      height: 44px;
+
+      flex: 0 0 auto;
+
+      place-items: center;
+
+      border:
+
+        1px solid
+
+        rgba(255, 255, 255, 0.14);
+
+      border-radius: 14px;
+
+      background:
+
+        rgba(255, 255, 255, 0.055);
+
+    }
+
+
+
+    .spt-brand-image {
+
+      width: 30px;
+
+      height: 30px;
+
+      object-fit: contain;
+
+    }
+
+
+
+    .spt-brand-copy {
+
+      min-width: 0;
+
+    }
+
+
+
+    .spt-brand-primary {
+
+      display: block;
+
+      overflow: hidden;
+
+      color: var(--spt-white);
+
+      font-family:
+
+        "Manrope",
+
+        Arial,
+
+        sans-serif;
+
+      font-size: 0.72rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.065em;
+
+      line-height: 1.25;
+
+      text-overflow: ellipsis;
+
+      text-transform: uppercase;
+
+      white-space: nowrap;
+
+    }
+
+
+
+    .spt-brand-secondary {
+
+      display: block;
+
+      margin-top: 4px;
+
+      overflow: hidden;
+
+      color:
+
+        rgba(255, 255, 255, 0.52);
+
+      font-family:
+
+        "Manrope",
+
+        Arial,
+
+        sans-serif;
+
+      font-size: 0.44rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.11em;
+
+      text-overflow: ellipsis;
+
+      text-transform: uppercase;
+
+      white-space: nowrap;
+
+    }
+
+
+
+    .spt-back-link {
+
+      display: inline-flex;
+
+      flex: 0 0 auto;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 10px 16px;
+
+      border:
+
+        1px solid
+
+        rgba(255, 255, 255, 0.14);
+
+      border-radius: 999px;
+
+      color:
+
+        rgba(255, 255, 255, 0.85);
+
+      font-family:
+
+        "Manrope",
+
+        Arial,
+
+        sans-serif;
+
+      font-size: 0.62rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.05em;
+
+      text-transform: uppercase;
+
+      transition:
+
+        color 180ms ease,
+
+        border-color 180ms ease,
+
+        background 180ms ease;
+
+      white-space: nowrap;
+
+    }
+
+
+
+    .spt-back-link:hover {
+
+      color: var(--spt-green-500);
+
+      border-color:
+
+        rgba(131, 223, 89, 0.35);
+
+      background:
+
+        rgba(131, 223, 89, 0.08);
+
+    }
+
+
+
+    .spt-back-link svg {
+
+      width: 14px;
+
+      height: 14px;
+
+      transform: rotate(180deg);
+
+    }
+
+
+
+    /* HERO */
+
+
+
+    .spt-hero {
+
+      position: relative;
+
+      padding:
+
+        70px 0
+
+        60px;
+
+      overflow: hidden;
+
+      color: var(--spt-white);
+
+      background:
+
+        radial-gradient(
+
+          circle at 92% 0%,
+
+          rgba(62, 150, 47, 0.24),
+
+          transparent 42%
+
+        ),
+
+        radial-gradient(
+
+          circle at 4% 100%,
+
+          rgba(24, 142, 232, 0.20),
+
+          transparent 42%
+
+        ),
+
+        linear-gradient(
+
+          145deg,
+
+          var(--spt-navy-850),
+
+          var(--spt-navy-1150)
+
+        );
+
+    }
+
+
+
+    .spt-hero-eyebrow {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin: 0 0 18px;
+
+      color:
+
+        rgba(255, 255, 255, 0.80);
+
+      font-family:
+
+        "Manrope",
+
+        Arial,
+
+        sans-serif;
+
+      font-size: 0.66rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.17em;
+
+      text-transform: uppercase;
+
+    }
+
+
+
+    .spt-hero-eyebrow::before {
+
+      width: 38px;
+
+      height: 4px;
+
+      flex: 0 0 auto;
+
+      border-radius: 999px;
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          var(--spt-red-500),
+
+          var(--spt-blue-500),
+
+          var(--spt-green-500)
+
+        );
+
+      content: "";
+
+    }
+
+
+
+    .spt-hero-title {
+
+      max-width: 780px;
+
+      margin: 0;
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+      font-size:
+
+        clamp(
+
+          2.3rem,
+
+          4.4vw,
+
+          3.7rem
+
+        );
+
+      font-weight: 600;
+
+      letter-spacing: -0.045em;
+
+      line-height: 1.05;
+
+      text-wrap: balance;
+
+    }
+
+
+
+    .spt-hero-title em {
+
+      color: var(--spt-green-500);
+
+      font-style: italic;
+
+    }
+
+
+
+    .spt-hero-copy {
+
+      max-width: 640px;
+
+      margin: 16px 0 0;
+
+      color:
+
+        rgba(255, 255, 255, 0.68);
+
+      font-size: 0.94rem;
+
+      line-height: 1.68;
+
+    }
+
+
+
+    .spt-hero-meta {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-top: 24px;
+
+    }
+
+
+
+    .spt-hero-meta-item {
+
+      display: inline-flex;
+
+      min-height: 34px;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 8px 12px;
+
+      border:
+
+        1px solid
+
+        rgba(255, 255, 255, 0.14);
+
+      border-radius: 999px;
+
+      color:
+
+        rgba(255, 255, 255, 0.85);
+
+      background:
+
+        rgba(255, 255, 255, 0.045);
+
+      font-family:
+
+        "Manrope",
+
+        Arial,
+
+        sans-serif;
+
+      font-size: 0.62rem;
+
+      font-weight: 700;
+
+    }
+
+
+
+    .spt-hero-meta-item svg {
+
+      width: 15px;
+
+      height: 15px;
+
+      flex: 0 0 auto;
+
+      color: var(--spt-green-500);
+
+    }
+
+
+
+    .spt-hero-cta {
+
+      position: relative;
+
+      z-index: 1;
+
+      isolation: isolate;
+
+      display: inline-flex;
+
+      min-height: 56px;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 11px;
+
+      margin-top: 30px;
+
+      padding: 15px 27px;
+
+      overflow: hidden;
+
+      border:
+
+        1px solid
+
+        rgba(255, 255, 255, 0.14);
+
+      border-radius: 999px;
+
+      color: var(--spt-white);
+
+      background:
+
+        linear-gradient(
+
+          135deg,
+
+          #8be963 0%,
+
+          var(--spt-green-500) 46%,
+
+          var(--spt-green-700) 100%
+
+        );
+
+      box-shadow:
+
+        0 18px 46px
+
+        rgba(99, 189, 67, 0.34);
+
+      cursor: pointer;
+
+      font-family:
+
+        "Manrope",
+
+        Arial,
+
+        sans-serif;
+
+      font-size: 0.68rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.075em;
+
+      text-transform: uppercase;
+
+      transition:
+
+        transform 220ms var(--spt-ease),
+
+        box-shadow 220ms ease,
+
+        filter 220ms ease;
+
+    }
+
+
+
+    .spt-hero-cta:hover {
+
+      filter:
+
+        saturate(1.07)
+
+        brightness(1.035);
+
+      box-shadow:
+
+        0 25px 64px
+
+        rgba(99, 189, 67, 0.48);
+
+      transform: translateY(-4px);
+
+    }
+
+
+
+    .spt-hero-cta:active {
+
+      transform: translateY(-1px);
+
+    }
+
+
+
+    .spt-hero-cta svg {
+
+      width: 18px;
+
+      height: 18px;
+
+      flex: 0 0 auto;
+
+      transition:
+
+        transform 220ms var(--spt-ease);
+
+    }
+
+
+
+    .spt-hero-cta:hover svg {
+
+      transform: translateX(5px);
+
+    }
+
+
+
+    .spt-brand-stripe {
+
+      height: 6px;
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          var(--spt-red-500) 0%,
+
+          var(--spt-red-500) 24%,
+
+          var(--spt-blue-500) 24%,
+
+          var(--spt-blue-500) 69%,
+
+          var(--spt-green-500) 69%,
+
+          var(--spt-green-500) 100%
+
+        );
+
+    }
+
+
+
+    /* SHARED SECTION STYLES */
+
+
+
+    .spt-section {
+
+      padding: 72px 0;
+
+    }
+
+
+
+    .spt-section-eyebrow {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin: 0 0 16px;
+
+      color: var(--spt-blue-600);
+
+      font-family:
+
+        "Manrope",
+
+        Arial,
+
+        sans-serif;
+
+      font-size: 0.66rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.17em;
+
+      text-transform: uppercase;
+
+    }
+
+
+
+    .spt-section-eyebrow::before {
+
+      width: 34px;
+
+      height: 4px;
+
+      flex: 0 0 auto;
+
+      border-radius: 999px;
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          var(--spt-red-600),
+
+          var(--spt-blue-600),
+
+          var(--spt-green-700)
+
+        );
+
+      content: "";
+
+    }
+
+
+
+    .spt-section-title {
+
+      max-width: 720px;
+
+      margin: 0;
+
+      color: var(--spt-navy-900);
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+      font-size:
+
+        clamp(
+
+          1.9rem,
+
+          3.4vw,
+
+          2.7rem
+
+        );
+
+      font-weight: 600;
+
+      letter-spacing: -0.04em;
+
+      line-height: 1.08;
+
+    }
+
+
+
+    .spt-section-copy {
+
+      max-width: 640px;
+
+      margin: 14px 0 0;
+
+      color: var(--spt-gray-500);
+
+      font-size: 0.88rem;
+
+      line-height: 1.7;
+
+    }
+
+
+
+    .spt-badge {
+
+      display: inline-flex;
+
+      min-height: 24px;
+
+      align-items: center;
+
+      padding: 4px 10px;
+
+      border-radius: 999px;
+
+      font-family:
+
+        "Manrope",
+
+        Arial,
+
+        sans-serif;
+
+      font-size: 0.55rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.07em;
+
+      text-transform: uppercase;
+
+      white-space: nowrap;
+
+    }
+
+
+
+    .spt-badge-available {
+
+      color: var(--spt-green-800);
+
+      background: var(--spt-green-100);
+
+    }
+
+
+
+    .spt-badge-available-dark {
+
+      color: var(--spt-green-400);
+
+      background:
+
+        rgba(131, 223, 89, 0.14);
+
+    }
+
+
+
+    .spt-badge-reserved {
+
+      color: var(--spt-gray-500);
+
+      background: var(--spt-gray-100);
+
+    }
+
+
+
+    .spt-badge-reserved-dark {
+
+      color:
+
+        rgba(255, 255, 255, 0.55);
+
+      background:
+
+        rgba(255, 255, 255, 0.09);
+
+    }
+
+
+
+    /* TITLE SPONSORSHIPS */
+
+
+
+    .spt-sponsorships {
+
+      background:
+
+        radial-gradient(
+
+          circle at 95% 0%,
+
+          rgba(24, 142, 232, 0.06),
+
+          transparent 30%
+
+        ),
+
+        var(--spt-gray-50);
+
+    }
+
+
+
+    .spt-featured-sponsor {
+
+      position: relative;
+
+      margin-top: 40px;
+
+      padding:
+
+        clamp(30px, 4vw, 46px);
+
+      overflow: hidden;
+
+      border:
+
+        1px solid
+
+        rgba(255, 255, 255, 0.10);
+
+      border-radius: 32px;
+
+      color: var(--spt-white);
+
+      background:
+
+        radial-gradient(
+
+          circle at 100% 0%,
+
+          rgba(62, 150, 47, 0.26),
+
+          transparent 40%
+
+        ),
+
+        radial-gradient(
+
+          circle at 0% 100%,
+
+          rgba(24, 142, 232, 0.20),
+
+          transparent 42%
+
+        ),
+
+        linear-gradient(
+
+          145deg,
+
+          var(--spt-navy-850),
+
+          var(--spt-navy-1150)
+
+        );
+
+      box-shadow:
+
+        var(--spt-shadow-md);
+
+    }
+
+
+
+    .spt-featured-sponsor-top {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 14px;
+
+    }
+
+
+
+    .spt-featured-sponsor-label {
+
+      color: var(--spt-green-400);
+
+      font-family:
+
+        "Manrope",
+
+        Arial,
+
+        sans-serif;
+
+      font-size: 0.55rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+
+    }
+
+
+
+    .spt-featured-sponsor-grid {
+
+      display: grid;
+
+      margin-top: 20px;
+
+      grid-template-columns:
+
+        minmax(0, 1.3fr)
+
+        minmax(240px, 0.8fr);
+
+      gap: 30px;
+
+    }
+
+
+
+    .spt-featured-sponsor-title {
+
+      margin: 0;
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+      font-size:
+
+        clamp(1.7rem, 3.2vw, 2.5rem);
+
+      font-weight: 600;
+
+      letter-spacing: -0.04em;
+
+      line-height: 1.08;
+
+    }
+
+
+
+    .spt-featured-sponsor-price {
+
+      display: flex;
+
+      align-items: baseline;
+
+      gap: 8px;
+
+      margin-top: 14px;
+
+    }
+
+
+
+    .spt-featured-sponsor-price strong {
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+      font-size: 2.4rem;
+
+      font-weight: 600;
+
+    }
+
+
+
+    .spt-featured-sponsor-price span {
+
+      color:
+
+        rgba(255, 255, 255, 0.55);
+
+      font-size: 0.75rem;
+
+    }
+
+
+
+    .spt-featured-sponsor ul {
+
+      margin: 22px 0 0;
+
+      padding: 0;
+
+      list-style: none;
+
+    }
+
+
+
+    .spt-featured-sponsor li {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      padding: 10px 0;
+
+      border-top:
+
+        1px solid
+
+        rgba(255, 255, 255, 0.09);
+
+      color:
+
+        rgba(255, 255, 255, 0.80);
+
+      font-size: 0.80rem;
+
+      line-height: 1.5;
+
+    }
+
+
+
+    .spt-featured-sponsor li:first-child {
+
+      border-top: 0;
+
+    }
+
+
+
+    .spt-featured-sponsor li svg {
+
+      width: 15px;
+
+      height: 15px;
+
+      flex: 0 0 auto;
+
+      margin-top: 2px;
+
+      color: var(--spt-green-400);
+
+    }
+
+
+
+    .spt-sponsor-grid {
+
+      display: grid;
+
+      margin-top: 16px;
+
+      grid-template-columns:
+
+        repeat(
+
+          3,
+
+          minmax(0, 1fr)
+
+        );
+
+      gap: 16px;
+
+    }
+
+
+
+    .spt-sponsor-card {
+
+      display: flex;
+
+      min-height: 100%;
+
+      padding: 24px;
+
+      flex-direction: column;
+
+      border:
+
+        1px solid
+
+        var(--spt-border);
+
+      border-radius: 22px;
+
+      background: var(--spt-white);
+
+      box-shadow:
+
+        var(--spt-shadow-sm);
+
+      transition:
+
+        transform 220ms var(--spt-ease),
+
+        box-shadow 220ms ease,
+
+        border-color 220ms ease;
+
+    }
+
+
+
+    .spt-sponsor-card:hover {
+
+      border-color:
+
+        rgba(8, 119, 208, 0.20);
+
+      box-shadow:
+
+        var(--spt-shadow-md);
+
+      transform: translateY(-5px);
+
+    }
+
+
+
+    .spt-sponsor-card.spt-is-reserved {
+
+      opacity: 0.62;
+
+    }
+
+
+
+    .spt-sponsor-card.spt-is-reserved:hover {
+
+      box-shadow:
+
+        var(--spt-shadow-sm);
+
+      transform: none;
+
+    }
+
+
+
+    .spt-sponsor-card-top {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      justify-content: space-between;
+
+      gap: 10px;
+
+    }
+
+
+
+    .spt-sponsor-card h3 {
+
+      margin: 0;
+
+      color: var(--spt-navy-900);
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+      font-size: 1.2rem;
+
+      font-weight: 600;
+
+      letter-spacing: -0.02em;
+
+      line-height: 1.2;
+
+    }
+
+
+
+    .spt-sponsor-card-price {
+
+      display: flex;
+
+      align-items: baseline;
+
+      gap: 6px;
+
+      margin-top: 14px;
+
+    }
+
+
+
+    .spt-sponsor-card-price strong {
+
+      color: var(--spt-navy-900);
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+      font-size: 1.55rem;
+
+      font-weight: 600;
+
+    }
+
+
+
+    .spt-sponsor-card-price span {
+
+      color: var(--spt-gray-450);
+
+      font-size: 0.68rem;
+
+    }
+
+
+
+    .spt-sponsor-card-availability {
+
+      margin-top: 8px;
+
+    }
+
+
+
+    .spt-sponsor-card p {
+
+      margin: 14px 0 0;
+
+      color: var(--spt-gray-500);
+
+      font-size: 0.76rem;
+
+      line-height: 1.62;
+
+      flex: 1 1 auto;
+
+    }
+
+
+
+    /* RAFFLE PRIZES */
+
+
+
+    .spt-raffle {
+
+      background: var(--spt-white);
+
+    }
+
+
+
+    .spt-raffle-category {
+
+      margin-top: 36px;
+
+    }
+
+
+
+    .spt-raffle-category:first-of-type {
+
+      margin-top: 40px;
+
+    }
+
+
+
+    .spt-raffle-category-head {
+
+      display: flex;
+
+      align-items: baseline;
+
+      justify-content: space-between;
+
+      gap: 12px;
+
+      padding-bottom: 10px;
+
+      border-bottom:
+
+        1px solid
+
+        var(--spt-border);
+
+    }
+
+
+
+    .spt-raffle-category-name {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      color: var(--spt-navy-900);
+
+      font-family:
+
+        "Manrope",
+
+        Arial,
+
+        sans-serif;
+
+      font-size: 0.78rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.04em;
+
+      text-transform: uppercase;
+
+    }
+
+
+
+    .spt-raffle-category-dot {
+
+      width: 10px;
+
+      height: 10px;
+
+      flex: 0 0 auto;
+
+      border-radius: 999px;
+
+    }
+
+
+
+    .spt-raffle-category-count {
+
+      color: var(--spt-gray-450);
+
+      font-size: 0.68rem;
+
+    }
+
+
+
+    .spt-raffle-grid {
+
+      display: grid;
+
+      margin-top: 14px;
+
+      grid-template-columns:
+
+        repeat(
+
+          3,
+
+          minmax(0, 1fr)
+
+        );
+
+      gap: 12px;
+
+    }
+
+
+
+    .spt-raffle-item {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 10px;
+
+      padding: 15px 17px;
+
+      border:
+
+        1px solid
+
+        var(--spt-border);
+
+      border-radius: 16px;
+
+      background: var(--spt-gray-50);
+
+      transition:
+
+        transform 200ms var(--spt-ease),
+
+        border-color 200ms ease,
+
+        background 200ms ease;
+
+    }
+
+
+
+    .spt-raffle-item:hover {
+
+      border-color:
+
+        rgba(8, 119, 208, 0.22);
+
+      background: var(--spt-white);
+
+      box-shadow:
+
+        var(--spt-shadow-sm);
+
+      transform: translateY(-3px);
+
+    }
+
+
+
+    .spt-raffle-item.spt-is-reserved {
+
+      opacity: 0.55;
+
+    }
+
+
+
+    .spt-raffle-item.spt-is-reserved:hover {
+
+      box-shadow: none;
+
+      transform: none;
+
+    }
+
+
+
+    .spt-raffle-item-copy strong {
+
+      display: block;
+
+      color: var(--spt-navy-900);
+
+      font-size: 0.78rem;
+
+      line-height: 1.4;
+
+    }
+
+
+
+    .spt-raffle-item-copy span {
+
+      display: block;
+
+      margin-top: 4px;
+
+      color: var(--spt-gray-450);
+
+      font-size: 0.68rem;
+
+    }
+
+
+
+    .spt-raffle-item-value {
+
+      flex: 0 0 auto;
+
+      text-align: right;
+
+    }
+
+
+
+    .spt-raffle-item-value strong {
+
+      display: block;
+
+      color: var(--spt-navy-900);
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+      font-size: 1rem;
+
+      font-weight: 600;
+
+    }
+
+
+
+    /* HOW IT WORKS */
+
+
+
+    .spt-how {
+
+      padding: 60px 0 0;
+
+      background: var(--spt-white);
+
+    }
+
+
+
+    .spt-how-inner {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 20px;
+
+      padding: 26px 30px;
+
+      border:
+
+        1px solid
+
+        var(--spt-border);
+
+      border-radius: 22px;
+
+      background: var(--spt-gray-50);
+
+    }
+
+
+
+    .spt-how-steps {
+
+      display: flex;
+
+      flex: 1 1 auto;
+
+      flex-wrap: wrap;
+
+      gap: 22px;
+
+    }
+
+
+
+    .spt-how-step {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+    }
+
+
+
+    .spt-how-step-number {
+
+      display: grid;
+
+      width: 30px;
+
+      height: 30px;
+
+      flex: 0 0 auto;
+
+      place-items: center;
+
+      border-radius: 999px;
+
+      color: var(--spt-white);
+
+      background: var(--spt-green-700);
+
+      font-family:
+
+        "Playfair Display",
+
+        Georgia,
+
+        serif;
+
+      font-size: 0.82rem;
+
+      font-style: italic;
+
+    }
+
+
+
+    .spt-how-step span {
+
+      color: var(--spt-navy-900);
+
+      font-size: 0.78rem;
+
+      font-weight: 600;
+
+    }
+
+
+
+    @media (max-width: 900px) {
+
+      .spt-featured-sponsor-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+
+      .spt-sponsor-grid {
+
+        grid-template-columns:
+
+          repeat(
+
+            2,
+
+            minmax(0, 1fr)
+
+          );
+
+      }
+
+
+
+      .spt-raffle-grid {
+
+        grid-template-columns:
+
+          repeat(
+
+            2,
+
+            minmax(0, 1fr)
+
+          );
+
+      }
+
+
+
+      .spt-how-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+      }
+
+    }
+
+
+
+    @media (max-width: 640px) {
+
+      .spt-header-inner {
+
+        flex-wrap: wrap;
+
+        min-height: auto;
+
+        gap: 14px;
+
+      }
+
+
+
+      .spt-back-link span {
+
+        display: none;
+
+      }
+
+
+
+      .spt-hero {
+
+        padding: 48px 0 40px;
+
+      }
+
+
+
+      .spt-hero-meta-item {
+
+        width: 100%;
+
+      }
+
+
+
+      .spt-section {
+
+        padding: 52px 0;
+
+      }
+
+
+
+      .spt-sponsor-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+
+      .spt-raffle-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+
+      .spt-how-steps {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+
+      }
+
+    }
+
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      #motiv-sponsorship-top *,
+
+      #motiv-sponsorship-top *::before,
+
+      #motiv-sponsorship-top *::after {
+
+        animation-duration: 0.01ms !important;
+
+        transition-duration: 0.01ms !important;
+
+      }
+
+    }
+
+
+
+    /* ---------- sponsored by ------------------------------------------ */
+
+
+
+    .spt-sponsors {
+
+      /* The knobs: speed, logo size, spacing. The LGW mark is a three-line
+
+         wordmark in a 2:1 box, so its type reads at a third of this
+
+         height. */
+
+      --spt-sponsors-speed: 40s;
+
+      --spt-sponsors-logo: 60px;
+
+      --spt-sponsors-gap: 86px;
+
+
+
+      border-bottom: 1px solid rgba(5, 29, 52, 0.05);
+
+      background:
+
+        linear-gradient(
+
+          180deg,
+
+          #ffffff,
+
+          #fafcfd
+
+        );
+
+    }
+
+
+
+    .spt-sponsors-inner {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: clamp(20px, 2.4vw, 42px);
+
+      padding-top: 26px;
+
+      padding-bottom: 26px;
+
+    }
+
+
+
+    /* The fixed half. */
+
+    .spt-sponsors-label {
+
+      display: flex;
+
+      flex: 0 0 auto;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin: 0;
+
+      color: #3f566a;
+
+      font-family:
+
+        "Manrope",
+
+        Arial,
+
+        sans-serif;
+
+      font-size:
+
+        clamp(
+
+          0.64rem,
+
+          0.78vw,
+
+          0.76rem
+
+        );
+
+      font-weight: 800;
+
+      letter-spacing: 0.06em;
+
+      line-height: 1.45;
+
+      text-transform: uppercase;
+
+      white-space: nowrap;
+
+    }
+
+
+
+    .spt-sponsors-label::before {
+
+      width: 37px;
+
+      height: 1px;
+
+      flex: 0 0 auto;
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          rgba(5, 29, 52, 0.08),
+
+          rgba(5, 29, 52, 0.42)
+
+        );
+
+      content: "";
+
+    }
+
+
+
+    /* Clips the track and softens both ends, so a logo fades rather than
+
+       being cut off mid-word. */
+
+    .spt-sponsors-viewport {
+
+      position: relative;
+
+      flex: 1 1 auto;
+
+      min-width: 0;
+
+      overflow: hidden;
+
+      -webkit-mask-image:
+
+        linear-gradient(
+
+          90deg,
+
+          transparent,
+
+          #000 5%,
+
+          #000 95%,
+
+          transparent
+
+        );
+
+      mask-image:
+
+        linear-gradient(
+
+          90deg,
+
+          transparent,
+
+          #000 5%,
+
+          #000 95%,
+
+          transparent
+
+        );
+
+    }
+
+
+
+    .spt-sponsors-track {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: var(--spt-sponsors-gap);
+
+      width: max-content;
+
+      margin: 0;
+
+      padding: 0;
+
+      list-style: none;
+
+      animation:
+
+        spt-sponsors-scroll
+
+        var(--spt-sponsors-speed)
+
+        linear
+
+        infinite;
+
+    }
+
+
+
+    /* Let a visitor stop the motion to read a logo. */
+
+    .spt-sponsors:hover .spt-sponsors-track,
+
+    .spt-sponsors-track:focus-within {
+
+      animation-play-state: paused;
+
+    }
+
+
+
+    .spt-sponsors-item {
+
+      flex: 0 0 auto;
+
+    }
+
+
+
+    .spt-sponsors-item a {
+
+      display: block;
+
+      border-radius: 6px;
+
+      line-height: 0;
+
+      opacity: 0.86;
+
+      transition: opacity 180ms ease;
+
+    }
+
+
+
+    .spt-sponsors-item a:hover {
+
+      opacity: 1;
+
+    }
+
+
+
+    .spt-sponsors-item a:focus-visible {
+
+      outline: 2px solid #3e962f;
+
+      outline-offset: 5px;
+
+    }
+
+
+
+    .spt-sponsors-item img {
+
+      display: block;
+
+      width: auto;
+
+      height: var(--spt-sponsors-logo);
+
+      max-width: none;
+
+      object-fit: contain;
+
+    }
+
+
+
+    /* The script mirrors the run, so travelling half the track lands on an
+
+       identical frame and the loop has no seam. */
+
+    @keyframes spt-sponsors-scroll {
+
+      from {
+
+        transform: translate3d(0, 0, 0);
+
+      }
+
+
+
+      to {
+
+        transform: translate3d(-50%, 0, 0);
+
+      }
+
+    }
+
+
+
+    @media (max-width: 760px) {
+
+      .spt-sponsors-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+
+        padding-top: 20px;
+
+        padding-bottom: 20px;
+
+      }
+
+
+
+      .spt-sponsors {
+
+        --spt-sponsors-logo: 46px;
+
+        --spt-sponsors-gap: 56px;
+
+      }
+
+
+
+      .spt-sponsors-viewport {
+
+        width: 100%;
+
+      }
+
+    }
+
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .spt-sponsors-track {
+
+        animation: none;
+
+      }
+
+
+
+      .spt-sponsors-viewport {
+
+        overflow-x: auto;
+
+        -webkit-mask-image: none;
+
+        mask-image: none;
+
+      }
+
+    }
+
+
+
+  </style>
+
+
+
+  <header class="spt-header">
+
+    <div class="spt-container spt-header-inner">
+
+
+
+      <a
+
+        class="spt-brand-link"
+
+        href="/"
+
+        aria-label="Back to the Motiv Brands Invitational overview"
+
+      >
+
+        <span class="spt-brand-image-shell">
+
+
+
+          <img
+
+            class="spt-brand-image"
+
+            src="assets/brand-mark.png"
+
+            alt=""
+
+            aria-hidden="true"
+
+          >
+
+        </span>
+
+
+
+        <span class="spt-brand-copy">
+
+
+
+          <span class="spt-brand-primary">
+
+            Motiv Brands Invitational
+
+          </span>
+
+
+
+          <span class="spt-brand-secondary">
+
+            January 27, 2027 · Bali Hai Golf Club
+
+          </span>
+
+        </span>
+
+      </a>
+
+
+
+      <a
+
+        class="spt-back-link"
+
+        href="/"
+
+      >
+
+        <svg
+
+          viewBox="0 0 24 24"
+
+          fill="none"
+
+          aria-hidden="true"
+
+        >
+
+          <path
+
+            d="M5 12h14M13 6l6 6-6 6"
+
+            stroke="currentColor"
+
+            stroke-width="1.8"
+
+            stroke-linecap="round"
+
+            stroke-linejoin="round"
+
+          />
+
+        </svg>
+
+
+
+        <span>
+
+          Back to Event Details
+
+        </span>
+
+      </a>
+
+    </div>
+
+  </header>
+  <section class="fld-hero">
+    <span class="fld-shot" aria-hidden="true"></span>
+    <div class="spt-container fld-hero-inner">
+      <div class="fld-lockup">
+        <div class="fld-lockup-row">
+          <img class="fld-mark" src="assets/brand-mark.png" alt="">
+          <span class="fld-lockup-brand">Motiv Brands</span>
+        </div>
+        <span class="fld-lockup-main">Invitational</span>
+      </div>
+
+      <h1 class="fld-h1">Who You&rsquo;ll Be Playing With</h1>
+      <p class="fld-lead">A focused 72-player field, invitation only, at
+        Bali Hai Golf Club on 27 January 2027. Championship golf, 27 planned
+        prizes, and the official Motiv Brands launch celebration to close the afternoon.</p>
+
+      <ul class="fld-facts">
+        <li><strong>27 January 2027</strong><span>12:00 PM modified shotgun</span></li>
+        <li><strong>Bali Hai Golf Club</strong><span>Las Vegas</span></li>
+        <li><strong>72 players</strong><span>By invitation only</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="fld-section fld-section--marquee">
+    <section class="mi-sponsors" aria-label="Sponsors">
+
+      <div class="mi-wide-container mi-sponsors-inner">
+
+
+
+        <p class="mi-sponsors-label">Sponsored By</p>
+
+
+
+        <div class="mi-sponsors-viewport">
+
+          <ul class="mi-sponsors-track" data-mi-sponsors>
+
+
+
+            <li class="mi-sponsors-item">
+
+              <a
+
+                href="https://leadgenerationworld.com"
+
+                target="_blank"
+
+                rel="noopener noreferrer"
+
+              >
+
+                <img
+
+                  src="assets/lgw-logo-white.png"
+
+                  alt="Lead Generation World"
+
+                  decoding="async"
+
+                >
+
+              </a>
+
+            </li>
+
+
+
+          
+
+            <li class="mi-sponsors-item">
+              <a
+                href="https://troutmanamin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/troutman-amin-logo-white.png"
+                  alt="Troutman Amin, LLP"
+                  decoding="async"
+                  onerror="this.closest('li').remove()"
+                >
+              </a>
+            </li>
+          
+
+            <li class="mi-sponsors-item">
+              <a
+                href="https://standardinformation.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/Standard-information.png"
+                  alt="Standard Information"
+                  decoding="async"
+                  onerror="this.closest('li').remove()"
+                >
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+
+
+      </div>
+
+    </section>
+  </section>
+
+  <section class="fld-section fld-section--alt">
+    <div class="spt-container">
+      <p class="fld-eyebrow">The field</p>
+      <h2 class="fld-h2">Joining Us at Bali Hai</h2>
+      <ul class="fld-grid">
+        <li class="fld-card">
+          <span class="fld-index">01</span>
+          <span class="fld-name">Nadiv Schorer Meiri</span>
+          
+          <span class="fld-company">Loop Marketers</span>
+        </li>
+        <li class="fld-card">
+          <span class="fld-index">02</span>
+          <span class="fld-name">Joe Ruiz</span>
+          
+          <span class="fld-company">Monetized Clicks</span>
+        </li>
+        <li class="fld-card">
+          <span class="fld-index">03</span>
+          <span class="fld-name">Rudy Treminio</span>
+          
+          <span class="fld-company">The Platinum Collection LLC</span>
+        </li>
+        <li class="fld-card">
+          <span class="fld-index">04</span>
+          <span class="fld-name">Paul Manno</span>
+          
+          <span class="fld-company">Affiliated Media</span>
+        </li>
+      </ul>
+
+      <div class="fld-cta-card">
+        <div>
+          <h3>There is still room in the field</h3>
+          <p>Places are limited to 72 and released by invitation.</p>
+        </div>
+        <a class="fld-cta" href="/start">Request an Invitation</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* The same system as the spotlight posts: the Bali Hai photograph, the
+       Motiv Brands / Invitational lockup, gold hairlines and a grain overlay,
+       so the page and the posts read as one piece of work. */
+    .fld-hero, .fld-section { position: relative; isolation: isolate; }
+    .fld-hero > *, .fld-section > * { position: relative; z-index: 2; }
+    .fld-section::after { content: ""; position: absolute; inset: 0; z-index: 0;
+      pointer-events: none; opacity: .07; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 220px 220px; }
+
+    /* ---- hero ---- */
+    .fld-hero { padding: clamp(66px, 8vw, 132px) 0 clamp(54px, 6vw, 96px); color: #fff;
+      overflow: hidden; }
+    .fld-shot { position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(104deg, rgba(2,10,20,.94) 0%, rgba(2,10,20,.86) 42%, rgba(2,10,20,.62) 74%, rgba(2,10,20,.58) 100%),
+        linear-gradient(0deg, rgba(1,7,15,.90) 0%, rgba(1,7,15,.26) 46%, rgba(1,7,15,.50) 100%),
+        url("assets/bali-hai.jpg");
+      background-size: cover, cover, cover;
+      background-position: center, center, center 42%; }
+    .fld-hero-inner { display: flex; flex-direction: column; }
+
+    .fld-lockup { display: flex; flex-direction: column; gap: 8px;
+      margin-bottom: clamp(30px, 4vw, 52px); }
+    .fld-lockup-row { display: flex; align-items: center; gap: 14px; }
+    .fld-mark { width: 46px; height: 46px; object-fit: contain; }
+    .fld-lockup-brand { font-family: 'Manrope', sans-serif; font-size: clamp(17px, 1.7vw, 22px);
+      font-weight: 800; letter-spacing: 3.8px; text-transform: uppercase; color: #fff; }
+    .fld-lockup-main { font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 5.6vw, 76px); font-weight: 700; line-height: .96;
+      letter-spacing: 1.4px; text-transform: uppercase;
+      background: linear-gradient(94deg, #f7e5b7 0%, #e7c77f 28%, #bd9146 62%, #f2d998 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      filter: drop-shadow(0 3px 18px rgba(0,0,0,.5)); }
+
+    .fld-h1 { margin: 0 0 20px; font-size: clamp(32px, 4.2vw, 58px); line-height: 1.06;
+      letter-spacing: -1.6px; text-wrap: balance; max-width: 15ch; }
+    .fld-lead { margin: 0; max-width: 680px; font-size: clamp(17px, 1.5vw, 20px);
+      line-height: 1.64; color: rgba(255,255,255,.80); }
+
+    .fld-facts { display: flex; flex-wrap: wrap; gap: clamp(16px, 2.4vw, 34px);
+      margin: clamp(34px, 4vw, 54px) 0 0; padding: clamp(24px, 2.6vw, 32px) 0 0;
+      list-style: none; border-top: 1px solid rgba(231,199,127,.32); }
+    .fld-facts li { display: flex; flex-direction: column; gap: 5px; min-width: 190px; }
+    .fld-facts strong { font-family: 'Manrope', sans-serif; font-size: clamp(18px, 1.7vw, 22px);
+      font-weight: 800; letter-spacing: -.2px; }
+    .fld-facts span { font-size: 15px; color: rgba(255,255,255,.62); }
+
+    /* ---- sections ---- */
+    .fld-section { padding: clamp(54px, 6vw, 100px) 0; color: #fff;
+      background: linear-gradient(180deg, #061b33 0%, #04142680 100%), #061b33; }
+    .fld-section--alt { background: linear-gradient(180deg, #03101f 0%, #061b33 100%); }
+    .fld-eyebrow { margin: 0 0 12px; font-family: 'Manrope', sans-serif; font-size: 13px;
+      font-weight: 800; letter-spacing: 4.2px; text-transform: uppercase;
+      background: linear-gradient(92deg, #f2d998 0%, #bd9146 55%, #f2d998 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .fld-h2 { margin: 0 0 clamp(26px, 3vw, 44px); font-size: clamp(26px, 2.8vw, 40px);
+      line-height: 1.14; letter-spacing: -.9px; }
+
+    /* ---- the field ---- */
+    .fld-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px; margin: 0; padding: 0; list-style: none; }
+    .fld-card { position: relative; display: flex; flex-direction: column;
+      padding: 32px 30px 30px; overflow: hidden; border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(162deg, rgba(255,255,255,.075), rgba(255,255,255,.015)); }
+    .fld-card::before { content: ""; position: absolute; top: 0; left: 0; width: 46px; height: 2px;
+      background: linear-gradient(90deg, #f2d998, rgba(189,145,70,0)); }
+    .fld-index { font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 800;
+      letter-spacing: 2.6px; color: rgba(231,199,127,.75); margin-bottom: 14px; }
+    .fld-name { font-family: 'Playfair Display', serif; font-size: 27px; font-weight: 700;
+      line-height: 1.12; letter-spacing: -.5px; }
+    .fld-name::after { content: ""; display: block; width: 44px; height: 2px;
+      margin: 15px 0 13px; background: rgba(231,199,127,.72); }
+    .fld-title { font-size: 14.5px; color: rgba(255,255,255,.66); margin-bottom: 3px; }
+    .fld-company { font-family: 'Manrope', sans-serif; font-size: 16.5px; font-weight: 700;
+      color: #9ad5fb; }
+
+    .fld-empty { margin: 0; max-width: 640px; font-size: 17px; line-height: 1.64;
+      color: rgba(255,255,255,.72); }
+
+    /* ---- closing call to action ---- */
+    .fld-cta-card { display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: clamp(20px, 3vw, 40px);
+      margin: clamp(32px, 4vw, 56px) 0 0; padding: clamp(28px, 3.4vw, 44px);
+      border: 1px solid rgba(231,199,127,.26); border-radius: 20px;
+      background: linear-gradient(140deg, rgba(231,199,127,.10), rgba(255,255,255,.02)); }
+    .fld-cta-card h3 { margin: 0 0 8px; font-size: clamp(21px, 2.1vw, 27px);
+      letter-spacing: -.5px; }
+    .fld-cta-card p { margin: 0; font-size: 16px; color: rgba(255,255,255,.72); }
+    .fld-cta { display: inline-flex; align-items: center; justify-content: center;
+      min-height: 60px; padding: 0 38px; border-radius: 999px; background: #63bd43;
+      color: #03101f; font-family: 'Manrope', sans-serif; font-size: 17px; font-weight: 800;
+      letter-spacing: .3px; text-decoration: none; white-space: nowrap;
+      box-shadow: 0 16px 40px rgba(99,189,67,.26); }
+    .fld-cta:hover { background: #83df59; }
+
+    @media (max-width: 640px) {
+      .fld-facts li { min-width: 100%; }
+      .fld-cta, .fld-cta-card { width: 100%; }
+    }
+
+    /* ---- the homepage marquee, recoloured for a dark section ---- */
+    /* ---- the homepage marquee ----
+       Layout, spacing, speed and breakpoint are the homepage's, verbatim. The
+       only departures are colour: the section behind it is dark, so the white
+       panel background goes, and the label and its rule invert. */
+    .fld-section--marquee { padding-top: clamp(34px, 3.6vw, 58px);
+      padding-bottom: clamp(34px, 3.6vw, 58px); }
+
+    .fld-section--marquee .mi-sponsors {
+      --mi-sponsors-speed: 40s;
+      --mi-sponsors-logo: 60px;
+      --mi-sponsors-gap: 86px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);   /* was --mi-border-faint */
+      background: none;                                      /* was white -> gray-50 */ }
+
+    .fld-section--marquee .mi-sponsors-inner { display: flex; align-items: center;
+      gap: clamp(20px, 2.4vw, 42px); padding-top: 26px; padding-bottom: 26px; }
+
+    .fld-section--marquee .mi-sponsors-label { display: flex; flex: 0 0 auto;
+      align-items: center; gap: 12px; margin: 0;
+      color: rgba(255, 255, 255, 0.72);                      /* was --mi-ink-soft */
+      font-family: "Manrope", Arial, sans-serif;
+      font-size: clamp(0.64rem, 0.78vw, 0.76rem); font-weight: 800;
+      letter-spacing: 0.06em; line-height: 1.45; text-transform: uppercase;
+      white-space: nowrap; }
+    .fld-section--marquee .mi-sponsors-label::before { width: 37px; height: 1px;
+      flex: 0 0 auto; content: "";
+      background: linear-gradient(90deg,
+        rgba(231, 199, 127, 0.12), rgba(231, 199, 127, 0.62)); /* was ink, now gold */ }
+
+    .fld-section--marquee .mi-sponsors-viewport { position: relative; flex: 1 1 auto;
+      min-width: 0; overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+
+    .fld-section--marquee .mi-sponsors-track { display: flex; align-items: center;
+      gap: var(--mi-sponsors-gap); width: max-content; margin: 0; padding: 0;
+      list-style: none;
+      animation: mi-sponsors-scroll var(--mi-sponsors-speed) linear infinite; }
+    .fld-section--marquee .mi-sponsors:hover .mi-sponsors-track,
+    .fld-section--marquee .mi-sponsors-track:focus-within { animation-play-state: paused; }
+
+    .fld-section--marquee .mi-sponsors-item { flex: 0 0 auto; }
+    .fld-section--marquee .mi-sponsors-item a { display: block; border-radius: 6px;
+      line-height: 0; opacity: 0.86; transition: opacity 180ms ease; }
+    .fld-section--marquee .mi-sponsors-item a:hover { opacity: 1; }
+    .fld-section--marquee .mi-sponsors-item a:focus-visible {
+      outline: 2px solid #e7c77f; outline-offset: 5px; }                /* was gold-600 */
+    .fld-section--marquee .mi-sponsors-item img { display: block; width: auto;
+      height: var(--mi-sponsors-logo); max-width: none; object-fit: contain; }
+
+    /* The script mirrors the run, so travelling half the track lands on an
+       identical frame and the loop has no seam. */
+    @keyframes mi-sponsors-scroll {
+      from { transform: translate3d(0, 0, 0); }
+      to   { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* The homepage breakpoint, unchanged at 760px. */
+    @media (max-width: 760px) {
+      .fld-section--marquee .mi-sponsors-inner { flex-direction: column;
+        align-items: flex-start; gap: 14px; padding-top: 20px; padding-bottom: 20px; }
+      .fld-section--marquee .mi-sponsors { --mi-sponsors-logo: 46px; --mi-sponsors-gap: 56px; }
+      .fld-section--marquee .mi-sponsors-viewport { width: 100%; overflow-x: auto;
+        -webkit-mask-image: none; mask-image: none; }
+      .fld-section--marquee .mi-sponsors-track { animation: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fld-section--marquee .mi-sponsors-track { animation: none; }
+    }
+  </style>
+
+<script>
+(function(){
+(function () {
+
+      var track = document.querySelector("[data-mi-sponsors]");
+
+
+
+      if (!track || track.dataset.miReady) {
+
+        return;
+
+      }
+
+
+
+      track.dataset.miReady = "1";
+
+
+
+      var originals =
+
+        Array.prototype.slice.call(track.children);
+
+
+
+      if (!originals.length) {
+
+        return;
+
+      }
+
+
+
+      function build() {
+
+        while (track.children.length > originals.length) {
+
+          track.removeChild(track.lastChild);
+
+        }
+
+
+
+        var viewport =
+
+          track.parentElement.offsetWidth || 1200;
+
+
+
+        var guard = 0;
+
+
+
+        // A short list leaves dead space on a wide screen, so repeat it
+
+        // until it over-fills, then mirror the whole run for the loop.
+
+        while (track.scrollWidth < viewport * 2 && guard++ < 40) {
+
+          originals.forEach(function (node) {
+
+            track.appendChild(node.cloneNode(true));
+
+          });
+
+        }
+
+
+
+        Array.prototype.slice
+
+          .call(track.children)
+
+          .forEach(function (node) {
+
+            track.appendChild(node.cloneNode(true));
+
+          });
+
+
+
+        // Everything past the first real pass is decoration: keep it out of
+
+        // the tab order and out of the screen-reader announcement, so one
+
+        // sponsor is read once rather than once per repeat.
+
+        Array.prototype.slice
+
+          .call(track.children)
+
+          .forEach(function (node, i) {
+
+            var decorative = i >= originals.length;
+
+
+
+            node.setAttribute(
+
+              "aria-hidden",
+
+              decorative ? "true" : "false"
+
+            );
+
+
+
+            Array.prototype.slice
+
+              .call(node.querySelectorAll("a"))
+
+              .forEach(function (a) {
+
+                if (decorative) {
+
+                  a.tabIndex = -1;
+
+                } else {
+
+                  a.removeAttribute("tabindex");
+
+                }
+
+              });
+
+          });
+
+      }
+
+
+
+      build();
+
+
+
+      // An <img> with height set and width auto measures 0 until it decodes,
+
+      // so a pass before the logos load sizes the run off the gaps alone.
+
+      var pending =
+
+        Array.prototype.slice
+
+          .call(track.querySelectorAll("img"))
+
+          .filter(function (img) {
+
+            return !img.complete;
+
+          });
+
+
+
+      if (pending.length) {
+
+        var left = pending.length;
+
+
+
+        pending.forEach(function (img) {
+
+          var done = function () {
+
+            if (--left === 0) {
+
+              build();
+
+            }
+
+          };
+
+
+
+          img.addEventListener("load", done, { once: true });
+
+          img.addEventListener("error", done, { once: true });
+
+        });
+
+      }
+
+
+
+      var timer;
+
+
+
+      window.addEventListener("resize", function () {
+
+        clearTimeout(timer);
+
+        timer = setTimeout(build, 200);
+
+      });
+
+    })();
+})();
+</script>
+<style>
+
+    @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap");
+
+
+
+    #motiv-sponsorship-bottom {
+
+      --spb-navy-900: #0b2e49;
+
+      --spb-blue-600: #0877d0;
+
+      --spb-blue-500: #188ee8;
+
+      --spb-gray-500: #6e7f8e;
+
+      --spb-gray-450: #8392a0;
+
+      --spb-ink: #0f263b;
+
+      --spb-border: rgba(5, 29, 52, 0.13);
+
+
+
+      position: relative;
+
+      width: 100%;
+
+      overflow-x: hidden;
+
+      color: var(--spb-ink);
+
+      background: #ffffff;
+
+      font-family:
+
+        "DM Sans",
+
+        Arial,
+
+        sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+
+
+    #motiv-sponsorship-bottom,
+
+    #motiv-sponsorship-bottom *,
+
+    #motiv-sponsorship-bottom *::before,
+
+    #motiv-sponsorship-bottom *::after {
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    #motiv-sponsorship-bottom a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+
+    .spb-container {
+
+      width:
+
+        min(
+
+          calc(100% - 48px),
+
+          1180px
+
+        );
+
+      margin-inline: auto;
+
+    }
+
+
+
+    .spb-note {
+
+      padding: 40px 0 8px;
+
+    }
+
+
+
+    .spb-note-inner {
+
+      padding: 22px 26px;
+
+      border:
+
+        1px solid
+
+        var(--spb-border);
+
+      border-radius: 20px;
+
+      background: #fafcfd;
+
+      text-align: center;
+
+    }
+
+
+
+    .spb-note-inner p {
+
+      margin: 0;
+
+      color: var(--spb-gray-500);
+
+      font-size: 0.82rem;
+
+      line-height: 1.6;
+
+    }
+
+
+
+    .spb-note-inner a {
+
+      color: var(--spb-blue-600);
+
+      font-weight: 700;
+
+      transition: color 180ms ease;
+
+    }
+
+
+
+    .spb-note-inner a:hover {
+
+      color: var(--spb-blue-500);
+
+    }
+
+
+
+    .spb-footer {
+
+      padding: 30px 0 46px;
+
+      margin-top: 24px;
+
+      border-top:
+
+        1px solid
+
+        var(--spb-border);
+
+    }
+
+
+
+    .spb-footer-inner {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 12px;
+
+    }
+
+
+
+    .spb-footer-sponsor {
+
+      color: var(--spb-gray-500);
+
+      font-size: 0.72rem;
+
+    }
+
+
+
+    .spb-footer-sponsor strong {
+
+      color: var(--spb-navy-900);
+
+      font-weight: 700;
+
+    }
+
+
+
+    .spb-footer-venue {
+
+      color: var(--spb-gray-450);
+
+      font-size: 0.72rem;
+
+      font-style: italic;
+
+    }
+
+
+
+    @media (max-width: 640px) {
+
+      .spb-footer-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+      }
+
+    }
+
+  </style>
+
+
+
+  <section class="spb-note">
+
+    <div class="spb-container">
+
+
+
+      <div class="spb-note-inner">
+
+
+
+        <p>
+
+          The field is released by invitation and limited to 72 players. Questions about joining us at Bali Hai? Email
+
+          <a href="mailto:invitational@motivbrands.co">
+
+            invitational@motivbrands.co
+
+          </a>
+
+          and we will come straight back to you.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <footer class="spb-footer">
+
+    <div class="spb-container spb-footer-inner">
+
+
+
+      <p class="spb-footer-sponsor">
+
+        Presented by
+
+        <strong>
+
+          Lead Generation World
+
+        </strong>
+
+        <span aria-hidden="true">&middot;</span>
+
+        <strong>
+
+          Troutman Amin, LLP
+
+        </strong>
+
+        <span aria-hidden="true">&middot;</span>
+
+        <strong>
+
+          Standard Information
+
+        </strong>
+
+      </p>
+
+
+
+      <p class="spb-footer-venue">
+
+        Bali Hai Golf Club &middot; 5160 South Las Vegas Boulevard, Las Vegas, NV
+
+      </p>
+
+    </div>
+
+  </footer>
+
+</section>
+
+<!--
+===============================================================================
+MOTIV BRANDS INVITATIONAL — SITE FOOTER
+
+Three columns on a black band: the brand lockup, the registration link, and
+the legal links. Collapses to a centred stack on small screens.
+
+The legal links point at the general policy pages by filename rather than a
+clean URL, so they resolve with or without the vercel.json rewrite rules -
+including when a page is opened straight off disk.
+===============================================================================
+-->
+
+<footer
+  id="motiv-invitational-footer"
+  class="mif-footer"
+>
+  <style>
+    #motiv-invitational-footer {
+      --mif-black: #000000;
+      --mif-white: #ffffff;
+      --mif-muted: rgba(255, 255, 255, 0.62);
+      --mif-green: #83df59;
+
+      position: relative;
+      width: 100%;
+      color: var(--mif-white);
+      background: var(--mif-black);
+      font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+    }
+
+    #motiv-invitational-footer,
+    #motiv-invitational-footer *,
+    #motiv-invitational-footer *::before,
+    #motiv-invitational-footer *::after {
+      box-sizing: border-box;
+    }
+
+    #motiv-invitational-footer a {
+      color: inherit;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    #motiv-invitational-footer img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .mif-inner {
+      display: grid;
+      width:
+        min(
+          calc(100% - 48px),
+          1720px
+        );
+      min-height: 132px;
+      margin-inline: auto;
+      padding-block: 26px;
+      grid-template-columns:
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr);
+      align-items: center;
+      gap:
+        clamp(
+          22px,
+          4vw,
+          64px
+        );
+    }
+
+    .mif-brand {
+      display: inline-flex;
+      align-items: center;
+      justify-self: start;
+      transition:
+        opacity 180ms ease;
+    }
+
+    .mif-brand:hover {
+      opacity: 0.88;
+    }
+
+    .mif-brand img {
+      width:
+        clamp(
+          210px,
+          19vw,
+          290px
+        );
+      height: auto;
+    }
+
+    /* The middle column: the one action in the footer. */
+    .mif-action {
+      justify-self: center;
+      font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+      font-size:
+        clamp(
+          0.78rem,
+          1vw,
+          0.92rem
+        );
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      line-height: 1.4;
+      text-align: center;
+      white-space: nowrap;
+      transition:
+        color 180ms ease;
+    }
+
+    .mif-action:hover {
+      color: var(--mif-green);
+    }
+
+    .mif-legal {
+      display: inline-flex;
+      align-items: center;
+      justify-self: end;
+      gap: 10px;
+      font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+      font-size:
+        clamp(
+          0.78rem,
+          1vw,
+          0.92rem
+        );
+      font-weight: 700;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+
+    .mif-legal a {
+      transition:
+        color 180ms ease;
+    }
+
+    .mif-legal a:hover {
+      color: var(--mif-green);
+    }
+
+    .mif-legal span {
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    #motiv-invitational-footer a:focus-visible {
+      outline:
+        3px solid
+        rgba(131, 223, 89, 0.55);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 980px) {
+      .mif-inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 20px;
+        padding-block: 32px;
+        text-align: center;
+      }
+
+      .mif-brand,
+      .mif-action,
+      .mif-legal {
+        justify-self: center;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .mif-legal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
+    }
+  </style>
+
+  <div class="mif-inner">
+
+    <a
+      class="mif-brand"
+      href="/"
+      aria-label="Motiv Brands, Inc. home"
+    >
+      <img
+        src="assets/motiv-brands-logo-light.png"
+        alt="Motiv Brands, Inc. Build Momentum. Own the Market."
+        width="480"
+        height="157"
+      >
+    </a>
+
+    <a
+      class="mif-action"
+      href="/start"
+      data-mif-cta
+      data-cta-name="Footer Registration"
+      data-cta-section="Invitational Footer"
+    >
+      Request Your Invitation
+    </a>
+
+    <p class="mif-legal">
+
+      <a href="privacy-policy-sponsor.html">
+        Privacy Policy
+      </a>
+
+      <span aria-hidden="true">|</span>
+
+      <a href="terms-of-use-sponsor.html">
+        Terms and Conditions
+      </a>
+    </p>
+  </div>
+
+  <script>
+    /* The footer CTA reports alongside the header and body CTAs. */
+    (function () {
+      var cta = document.querySelector("[data-mif-cta]");
+
+      if (!cta) {
+        return;
+      }
+
+      cta.addEventListener("click", function () {
+        window.dataLayer = window.dataLayer || [];
+
+        window.dataLayer.push({
+          event: "motiv_invitational_cta_clicked",
+          page_name: "Motiv Brands Invitational",
+          cta_name: cta.getAttribute("data-cta-name"),
+          cta_section: cta.getAttribute("data-cta-section")
+        });
+      });
+    })();
+  </script>
+</footer>
+</body>
+</html>
