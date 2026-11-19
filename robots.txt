@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://invitational.motivbrands.co/sitemap.xml
